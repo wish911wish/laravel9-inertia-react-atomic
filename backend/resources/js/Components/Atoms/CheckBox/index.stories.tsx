@@ -1,11 +1,11 @@
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
-import CheckBox from "./index";
+import Checkbox from "./index";
 
-type T = typeof CheckBox;
+type T = typeof Checkbox;
 type Story = ComponentStoryObj<T>;
 
 export default {
-  component: CheckBox,
+  component: Checkbox,
 } as ComponentMeta<T>;
 
 export const Default: Story = {};
