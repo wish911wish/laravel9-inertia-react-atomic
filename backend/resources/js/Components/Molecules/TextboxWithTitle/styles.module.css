@@ -1,0 +1,38 @@
+@import "../../../properties.css";
+
+.module {
+  border: none;
+  max-width: 640px;
+}
+
+.title {
+  display: block;
+  font-weight: bolder;
+  margin-bottom: var(--space);
+}
+
+.textbox {
+  display: block;
+  width: 100%;
+  border: var(--border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-size: var(--font-size-s);
+  padding: var(--space);
+}
+
+.textbox[aria-invalid="true"] {
+  border-color: var(--color-warning);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  min-height: 18px;
+  padding-top: var(--space);
+}
+
+.error {
+  flex-grow: 1;
+  text-align: right;
+}
