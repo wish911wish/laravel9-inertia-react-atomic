@@ -1,5 +1,5 @@
 import Checkbox from '../../Atoms/Checkbox'
-import { ComponentPropsWithoutRef, ComponentPropsWithRef, useId } from "react"
+import { ComponentPropsWithoutRef, ComponentPropsWithRef } from "react"
 import Txt, {WarningTxt} from '../../Atoms/Txt'
 import styles from "./styles.module.css";
 import clsx from "clsx";
@@ -21,17 +21,13 @@ const TextBoxWithTitle = ({
   description,
   error
 }: Props) => {
-  const descriptionId = useId();
-  const errorMessageId = useId();
   return (
     <div className={clsx(className, styles.module)}>
       <label {...labelProps} className={styles.label}>
         <Checkbox
           {...checkboxProps}
           className={clsx(checkboxProps?.className, styles.checkbox)}
-          aria-describedby={descriptionId}
           aria-invalid={!!error}
-          aria-errormessage={errorMessageId}
         />
         <span role="heading" aria-level={titleLevel}>
           {children}
@@ -39,7 +35,7 @@ const TextBoxWithTitle = ({
       </label>
       <div className={styles.bottom}>
         {error && (
-          <WarningTxt id={errorMessageId} className={styles.error}>{error}</WarningTxt>
+          <WarningTxt className={styles.error}>{error}</WarningTxt>
         )}
       </div>
     </div>

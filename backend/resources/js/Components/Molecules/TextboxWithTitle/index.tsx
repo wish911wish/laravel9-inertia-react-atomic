@@ -1,6 +1,6 @@
 import TextBox from '../../Atoms/TextBox'
 import Txt, {WarningTxt} from '../../Atoms/Txt'
-import { ComponentPropsWithoutRef, ComponentPropsWithRef, useId } from "react"
+import { ComponentPropsWithoutRef, ComponentPropsWithRef } from "react"
 import styles from "./styles.module.css";
 import clsx from "clsx";
 
@@ -21,8 +21,6 @@ const TextBoxWithTitle = ({
   description,
   error
 }: Props) => {
-  const descriptionId = useId();
-  const errorMessageId = useId();
   return (
     <div className={clsx(className, styles.module)}>
       <label {...labelProps}>
@@ -32,17 +30,15 @@ const TextBoxWithTitle = ({
         <TextBox
           {...textboxProps}
           className={clsx(textboxProps?.className, styles.textbox)}
-          aria-describedby={descriptionId}
           aria-invalid={!!error}
-          aria-errormessage={errorMessageId}
         />
       </label>
       <div className={styles.bottom}>
         {description && (
-          <Txt id={descriptionId}>{description}</Txt>
+          <Txt>{description}</Txt>
         )}
         {error && (
-          <WarningTxt id={errorMessageId} className={styles.error}>{error}</WarningTxt>
+          <WarningTxt className={styles.error}>{error}</WarningTxt>
         )}
       </div>
     </div>
