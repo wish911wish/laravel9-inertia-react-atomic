@@ -1,0 +1,15 @@
+.module {
+  padding: 16px;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  color: var(--color-white);
+}
+
+.module[data-theme='success'] {
+  background-color: var(--color-primary);
+}
+
+.module[data-theme='fail'] {
+  background-color: var(--color-warning);
+}
