@@ -1,0 +1,41 @@
+@import '../../../properties.css';
+
+.container {
+  background-color: var(--color-background);
+  padding-top: 1.5rem;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+.logo {
+  color: var(--color-gray);
+  fill: currentColor;
+  width: 5rem;
+  height: 5rem;
+}
+
+.content {
+  width: 100%;
+  box-shadow: var(--ring-offset-shadow, 0 0 #0000), var(--ring-shadow, 0 0 #0000), var(--shadow);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--color-white);
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    justify-content: center;
+    padding-top: 0px;
+  }
+
+  .content {
+    max-width: 28rem;
+    border-radius: 0.5rem;
+  }
+}
