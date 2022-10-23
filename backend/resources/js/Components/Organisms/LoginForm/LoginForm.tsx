@@ -1,11 +1,10 @@
 import TextBoxWithTitle from '../../Molecules/TextBoxWithTitle'
-import Txt, { WarningTxt } from '../../Atoms/Txt'
-import { ComponentPropsWithoutRef } from 'react'
-import { PrimaryButton, Button } from '../../Atoms/Button'
+import { WarningTxt } from '../../Atoms/Txt'
+import { Button } from '../../Atoms/Button'
 import styles from './styles.module.css'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { LoginInputSchema } from '../../../Services/Api/Login/schema'
+import { LoginInputSchema } from '../../../Services/Inertia/Login/schema'
 
 type Values = {
   email: string
