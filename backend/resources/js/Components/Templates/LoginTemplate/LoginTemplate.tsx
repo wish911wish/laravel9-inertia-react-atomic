@@ -1,8 +1,8 @@
 import { LoginForm } from '../../Organisms/LoginForm'
 import { Alert } from '../../Atoms/Alert'
 import styles from './styles.module.css'
-import { LoginInput } from '../../../Services/Api/Login/type'
-import { postLogin } from '../../../Services/Api/Login'
+import { LoginInput } from '../../../Services/Inertia/Login/type'
+import { postLogin } from '../../../Services/Inertia/Login'
 import { usePortalDispatch } from '../../Layouts/PortalContextProvider'
 
 type Props = {
