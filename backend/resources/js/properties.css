@@ -45,18 +45,18 @@
 
   /* 文字：サイズ（媒体に最適化した文字サイズ） */
   --font-size-xxs: none;
-  --font-size-xs: 0.6rem;
-  --font-size-s: 0.8rem;
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.875rem;
   --font-size-m: 1rem;
-  --font-size-l: 1.2rem;
-  --font-size-xl: 1.4rem;
-  --font-size-xxl: 1.6rem;
-  --font-size-xxxl: 1.8rem;
-  --font-size-xxxxl: 2rem;
+  --font-size-l: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-xxl: 1.5rem;
+  --font-size-xxxl: 1.875rem;
+  --font-size-xxxxl: 2.25rem;
 
   /* 文字：太さ（媒体に最適化した文字の太さ） */
   --font-weight-default: 400;
-  --font-weight-bold: 700;
+  --font-weight-bold: 600;
 
   /* 余白（媒体に最適化した余白単位） */
   --space: 0.5rem;
@@ -74,13 +74,20 @@
   --hover-animation-duration: 150ms;
   --hover-animation-timing: ease-out;
   --hover-animation: var(--hover-animation-duration) var(--hover-animation-timing);
+  --enter-animation-duration: 200ms;
+  --enter-animation-timing: ease-out;
+  --enter-animation: var(--enter-animation-duration) var(--enter-animation-timing);
+  --leave-animation-duration: 75ms;
+  --leave-animation-timing: ease-in;
+  --leave-animation: var(--leave-animation-duration) var(--leave-animation-timing);
   --fade-animation-duration: 0.2s;
   --fade-animation-timing: linear;
   --fade-animation: var(--fade-animation-duration) var(--fade-animation-timing);
 
   --ring-offset-shadow: 0 0 #0000;
   --ring-shadow: 0 0 #0000;
-  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
 
   /* Z 座標の管理（Web 媒体／CSS では Z 座標を管理する） */
   --z-header: 10;
