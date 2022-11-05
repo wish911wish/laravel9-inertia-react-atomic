@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 import clsx from 'clsx'
 import { PortalContextProvider } from '../PortalContextProvider'
 import ApplicationLogo from '../../../Components/Atoms/ApplicationLogo'
-import Anchor from '../../../Components/Atoms/Anchor'
+import { Anchor } from '../../../Components/Atoms/Anchor'
 
 type Props = ComponentPropsWithoutRef<'div'>
 
