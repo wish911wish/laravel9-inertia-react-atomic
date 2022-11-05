@@ -1,8 +1,7 @@
 @import '../../../properties.css';
 
 .button {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition: var(--hover-animation);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
@@ -20,6 +19,11 @@
 }
 
 .button:hover {
+  opacity: 0.7;
+}
+
+.button[disabled] {
+  pointer-events: none;
   opacity: 0.7;
 }
 
