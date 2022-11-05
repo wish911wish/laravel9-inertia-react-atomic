@@ -1,0 +1,63 @@
+@import '../../../properties.css';
+
+.transition {
+  position: relative;
+  z-index: 50;
+}
+
+.container {
+  width: 12rem;
+  border-radius: var(--radius);
+  margin-top: var(--space);
+  box-shadow: var(--shadow);
+  position: absolute;
+}
+
+.content {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.top {
+  transform-origin: top;
+}
+
+.right {
+  transform-origin: top right;
+  right: 0px;
+}
+
+.left {
+  transform-origin: top left;
+  left: 0px;
+}
+
+.enter {
+  transition: var(--enter-animation);
+}
+
+.enterFrom {
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(0.95) scaleY(0.95);
+  opacity: 0;
+}
+
+.enterTo {
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  opacity: 100;
+}
+
+.leave {
+  transform: var(--leave-animation);
+}
+
+.leaveFrom {
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  opacity: 100;
+}
+
+.leaveTo {
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(0.95) scaleY(0.95);
+  opacity: 0;
+}

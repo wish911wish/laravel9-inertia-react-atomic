@@ -1,0 +1,37 @@
+@import '../../../properties.css';
+
+.container {
+  display: inline-flex;
+  border-radius: var(--radius);
+}
+
+.button {
+  display: inline-flex;
+  column-gap: var(--space);
+  align-items: center;
+  border: solid transparent;
+  background-color: var(--color-white);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: var(--font-size-m);
+  line-height: 1rem;
+  color: var(--color-gray);
+  transition: var(--hover-animation);
+}
+
+.button:hover {
+  color: var(--color-gray-dk);
+}
+
+.arrow {
+  width: 1rem;
+  height: 1rem;
+}
+
+.contentsBackground {
+  position: fixed;
+  z-index: 40;
+  inset: 0px;
+}
