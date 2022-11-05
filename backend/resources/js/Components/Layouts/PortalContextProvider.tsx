@@ -2,28 +2,28 @@ import { createContext, ReactNode, useContext } from 'react'
 import { BasicPortal } from './BasicPortal'
 import { usePortal } from './usePortal'
 
-const ProtalDispatchContext = createContext<{
+const PortalDispatchContext = createContext<{
   showPortal: (renderNode: () => ReactNode) => void
   hidePortal: () => void
 }>({
   showPortal: () => null,
   hidePortal: () => {},
 })
-const ProtalStateContext = createContext({} as ReactNode)
+const PortalStateContext = createContext({} as ReactNode)
 
 export function usePortalDispatch() {
-  return useContext(ProtalDispatchContext)
+  return useContext(PortalDispatchContext)
 }
 
 export const PortalContextProvider = ({ children }: { children: ReactNode }) => {
   const { showPortal, hidePortal, isShowPortal, renderNode } = usePortal()
   return (
-    <ProtalDispatchContext.Provider value={{ showPortal, hidePortal }}>
-      <ProtalStateContext.Provider value={isShowPortal}>
+    <PortalDispatchContext.Provider value={{ showPortal, hidePortal }}>
+      <PortalStateContext.Provider value={isShowPortal}>
         {children}
         {isShowPortal && <BasicPortal>{renderNode()}</BasicPortal>}
         <div id="portal-root" />
-      </ProtalStateContext.Provider>
-    </ProtalDispatchContext.Provider>
+      </PortalStateContext.Provider>
+    </PortalDispatchContext.Provider>
   )
 }
