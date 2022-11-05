@@ -1,0 +1,29 @@
+@import '../../../properties.css';
+
+.module {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-default);
+  line-height: 1.25rem;
+  text-decoration: none;
+  color: var(--color-gray);
+  transition: var(--hover-animation);
+}
+
+.module:focus {
+  outline: none;
+}
+
+.module:hover {
+  border-bottom: 2px solid var(--color-gray-lt);
+  color: var(--color-gray-dk);
+}
+
+.module[aria-selected='true'] {
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-text);
+}
