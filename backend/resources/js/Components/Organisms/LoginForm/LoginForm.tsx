@@ -5,6 +5,7 @@ import styles from './styles.module.css'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { LoginInputSchema } from '../../../Services/Inertia/Login/schema'
+import { useLoadingState } from '../../Hooks/LoadingProvider'
 
 type Values = {
   email: string
@@ -31,6 +32,7 @@ export const LoginForm = ({ initialValues, onValid }: Props) => {
     defaultValues: { ...defaultValues, ...initialValues },
     resolver: zodResolver(LoginInputSchema),
   })
+  const { isLoading } = useLoadingState()
 
   return (
     <form onSubmit={handleSubmit(onValid)}>
@@ -54,7 +56,7 @@ export const LoginForm = ({ initialValues, onValid }: Props) => {
         error={errors.password?.message}
       />
       <WarningTxt></WarningTxt>
-      <Button>Log in</Button>
+      <Button disabled={isLoading}>Log in</Button>
     </form>
   )
 }
